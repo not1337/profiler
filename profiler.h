@@ -297,6 +297,11 @@ static pthread_mutex_t profile_mutex=PTHREAD_MUTEX_INITIALIZER;
 #endif
 
 static void __attribute__((no_instrument_function))
+	__attribute__((no_sanitize_address))
+	__attribute__((no_sanitize_thread))
+	__attribute__((no_sanitize_undefined))
+	__attribute__((no_profile_instrument_function))
+	__attribute__((no_stack_limit))
 	__attribute__((optimize("no-stack-protector")))
 	__attribute__((optimize("omit-frame-pointer")))
 	__attribute__((optimize("Os")))
@@ -362,6 +367,11 @@ repeat:			depth= __atomic_load_n(&p->e->depth,__ATOMIC_SEQ_CST);
 #ifdef _PTHREAD_H
 
 static void __attribute__((no_instrument_function))
+	__attribute__((no_sanitize_address))
+	__attribute__((no_sanitize_thread))
+	__attribute__((no_sanitize_undefined))
+	__attribute__((no_profile_instrument_function))
+	__attribute__((no_stack_limit))
 	__attribute__((optimize("no-stack-protector")))
 	__attribute__((optimize("omit-frame-pointer")))
 	__attribute__((optimize("Os")))
@@ -427,6 +437,11 @@ static void __attribute__((no_instrument_function))
 #endif
 
 void __attribute__ ((constructor)) __attribute__((no_instrument_function))
+	__attribute__((no_sanitize_address))
+	__attribute__((no_sanitize_thread))
+	__attribute__((no_sanitize_undefined))
+	__attribute__((no_profile_instrument_function))
+	__attribute__((no_stack_limit))
 	__attribute__((optimize("no-stack-protector")))
 	__attribute__((optimize("omit-frame-pointer")))
 	__attribute__((optimize("Os")))
@@ -498,6 +513,11 @@ err1:		profile_error=1;
 }
 
 static void __attribute__((no_instrument_function)) __attribute__((cold))
+	__attribute__((no_sanitize_address))
+	__attribute__((no_sanitize_thread))
+	__attribute__((no_sanitize_undefined))
+	__attribute__((no_profile_instrument_function))
+	__attribute__((no_stack_limit))
 	__attribute__((optimize("no-stack-protector")))
 	__attribute__((optimize("omit-frame-pointer")))
 	__attribute__((optimize("Os")))
@@ -510,6 +530,11 @@ static void __attribute__((no_instrument_function)) __attribute__((cold))
 }
 
 static void __attribute__((no_instrument_function)) __attribute__((cold))
+	__attribute__((no_sanitize_address))
+	__attribute__((no_sanitize_thread))
+	__attribute__((no_sanitize_undefined))
+	__attribute__((no_profile_instrument_function))
+	__attribute__((no_stack_limit))
 	__attribute__((optimize("no-stack-protector")))
 	__attribute__((optimize("omit-frame-pointer")))
 	__attribute__((optimize("Os")))
@@ -527,6 +552,11 @@ static void __attribute__((no_instrument_function)) __attribute__((cold))
 }
 
 static void __attribute__((no_instrument_function)) __attribute__((cold))
+	__attribute__((no_sanitize_address))
+	__attribute__((no_sanitize_thread))
+	__attribute__((no_sanitize_undefined))
+	__attribute__((no_profile_instrument_function))
+	__attribute__((no_stack_limit))
 	__attribute__((optimize("no-stack-protector")))
 	__attribute__((optimize("omit-frame-pointer")))
 	__attribute__((optimize("Os")))
@@ -570,6 +600,11 @@ static void __attribute__((no_instrument_function)) __attribute__((cold))
 }
 
 static void __attribute__((no_instrument_function)) __attribute__((cold))
+	__attribute__((no_sanitize_address))
+	__attribute__((no_sanitize_thread))
+	__attribute__((no_sanitize_undefined))
+	__attribute__((no_profile_instrument_function))
+	__attribute__((no_stack_limit))
 	__attribute__((optimize("no-stack-protector")))
 	__attribute__((optimize("omit-frame-pointer")))
 	__attribute__((optimize("Os")))
@@ -590,6 +625,11 @@ static void __attribute__((no_instrument_function)) __attribute__((cold))
 }
 
 void __attribute__ ((destructor)) __attribute__((no_instrument_function))
+	__attribute__((no_sanitize_address))
+	__attribute__((no_sanitize_thread))
+	__attribute__((no_sanitize_undefined))
+	__attribute__((no_profile_instrument_function))
+	__attribute__((no_stack_limit))
 	__attribute__((optimize("no-stack-protector")))
 	__attribute__((optimize("omit-frame-pointer")))
 	__attribute__((optimize("Os")))
@@ -716,6 +756,11 @@ out:	if(__builtin_expect(data!=NULL,1))free(data);
 }
 
 void __attribute__((no_instrument_function)) __attribute__((hot))
+	__attribute__((no_sanitize_address))
+	__attribute__((no_sanitize_thread))
+	__attribute__((no_sanitize_undefined))
+	__attribute__((no_profile_instrument_function))
+	__attribute__((no_stack_limit))
 	__attribute__((optimize("no-stack-protector")))
 	__attribute__((optimize("omit-frame-pointer")))
 	__attribute__((optimize("Os")))
@@ -1008,6 +1053,11 @@ err:	profile_error=1;
 }
 
 void __attribute__((no_instrument_function)) __attribute__((hot))
+	__attribute__((no_sanitize_address))
+	__attribute__((no_sanitize_thread))
+	__attribute__((no_sanitize_undefined))
+	__attribute__((no_profile_instrument_function))
+	__attribute__((no_stack_limit))
 	__attribute__((optimize("no-stack-protector")))
 	__attribute__((optimize("omit-frame-pointer")))
 	__attribute__((optimize("Os")))
